@@ -32,18 +32,20 @@ function pcClick() {
 .backgraund {
   height: 900px;
   width: 1600px;
-  z-index: -1;
+  z-index: 0;
 }
 .interact-object {
   height: 230px;
   width: 150px;
-  z-index: 4;
-  position: relative;
-  right: 540px;
-  top: -40px;
+  z-index: 1;
+  position: absolute;
+  top: 300px;
+  left: 1060px;
 }
 .counter{
   font-size: 40px;
-  color:aliceblue
+  color:aliceblue;
+  z-index: 1;
+  position: absolute;
 }
 </style>
