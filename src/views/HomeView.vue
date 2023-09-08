@@ -6,13 +6,19 @@ const counter = ref(0);
 function pcClick() {
   counter.value++;
 }
+
+function changeMonitor() {
+  
+}
 </script>
 
 <template>
   <main>
     <div class ="main">
       <img class="backgraund" src="src\assets\Sprite-0002-Recovered.svg" />
-      <img class="interact-object" src="src\assets\PC.svg" @click="pcClick"/>
+      <img class="interact-object pc" src="src\assets\PC.svg" @click="pcClick" />
+      <img class="interact-object monitor" src="src\assets\Monitor.svg" @click="changeMonitor "/>
+      <img class="interact-object monitor" src="src\assets\Monitor2.svg" />
       <div class="counter">
         {{ counter }}
       </div>
@@ -35,12 +41,19 @@ function pcClick() {
   z-index: 0;
 }
 .interact-object {
-  height: 230px;
-  width: 150px;
   z-index: 1;
   position: absolute;
+}
+.pc {
+  height: 230px;
+  width: 150px;
   top: 300px;
   left: 1060px;
+}
+.monitor{
+  width: 420px;
+  height: 210px;
+  top:310px;
 }
 .counter{
   font-size: 40px;
