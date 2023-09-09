@@ -3,11 +3,11 @@ import { ref } from 'vue'
 
 const counter = ref(0);
 const idMonitor = ref(0);
-const currentMonitor = ref('src\\assets\\Monitor.svg');
+const currentMonitor = ref('src\\assets\\Monitor-off.svg');
 
 const monitors = [
-  'src\\assets\\Monitor.svg',
-  'src\\assets\\Monitor2.svg'
+  'src\\assets\\Monitor-off.svg',
+  'src\\assets\\Monitor-ystu.svg'
 ];
 
 
@@ -29,8 +29,8 @@ function changeMonitor() {
 <template>
   <main>
     <div class ="main">
-      <img class="backgraund" src="src\assets\Sprite-0002-Recovered.svg" />
-      <img class="interact-object pc" src="src\assets\PC.svg" @click="pcClick" />
+      <img class="backgraund" src="src\assets\Background.svg" />
+      <img class="interact-object pc" src="src\assets\PC-dark.svg" @click="pcClick" />
       <img class="interact-object monitor" :src="currentMonitor" @click="changeMonitor" />
       
       <div class="counter">
@@ -59,15 +59,16 @@ function changeMonitor() {
   position: absolute;
 }
 .pc {
-  height: 230px;
-  width: 150px;
-  top: 300px;
-  left: 1060px;
+  height: 240px;
+  width: 140px;
+  top: 320px;
+  left: 1010px;
 }
 .monitor{
-  width: 420px;
-  height: 210px;
-  top:310px;
+  width: 320px;
+  height: 220px;
+  top: 340px;
+  left: 660px;
 }
 .counter{
   font-size: 40px;
