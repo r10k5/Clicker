@@ -2,13 +2,27 @@
 import { ref } from 'vue'
 
 const counter = ref(0);
+const idMonitor = ref(0);
+const currentMonitor = ref('src\\assets\\Monitor.svg');
+
+const monitors = [
+  'src\\assets\\Monitor.svg',
+  'src\\assets\\Monitor2.svg'
+];
+
 
 function pcClick() {
   counter.value++;
 }
 
+
 function changeMonitor() {
-  
+  if (idMonitor.value === 0) {
+    idMonitor.value = 1;
+  } else {
+    idMonitor.value = 0;
+  }
+  currentMonitor.value = monitors[idMonitor.value]
 }
 </script>
 
@@ -17,8 +31,8 @@ function changeMonitor() {
     <div class ="main">
       <img class="backgraund" src="src\assets\Sprite-0002-Recovered.svg" />
       <img class="interact-object pc" src="src\assets\PC.svg" @click="pcClick" />
-      <img class="interact-object monitor" src="src\assets\Monitor.svg" @click="changeMonitor "/>
-      <img class="interact-object monitor" src="src\assets\Monitor2.svg" />
+      <img class="interact-object monitor" :src="currentMonitor" @click="changeMonitor" />
+      
       <div class="counter">
         {{ counter }}
       </div>
