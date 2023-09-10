@@ -69,62 +69,62 @@ defineProps<KeyboardMouse>();
     </svg>
 
     <svg v-if="type === 'light'" class="interact-object keyboard-mouse" viewBox="0 0 33 2" version="1.1" width="33" height="2" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-        <rect x="1" y="0" width="1" height="1" fill="#2E2E2E" />
-        <rect x="2" y="0" width="1" height="1" fill="#080808" opacity="0.321569" />
-        <rect x="3" y="0" width="1" height="1" fill="#676767" />
-        <rect x="5" y="0" width="1" height="1" fill="#2E2E2E" />
-        <rect x="7" y="0" width="1" height="1" fill="#212121" />
-        <rect x="8" y="0" width="1" height="1" fill="#373737" />
-        <rect x="9" y="0" width="1" height="1" fill="#080808" opacity="0.121569" />
-        <rect x="10" y="0" width="1" height="1" fill="#212121" />
-        <rect x="12" y="0" width="1" height="1" fill="#4B4B4B" />
-        <rect x="13" y="0" width="1" height="1" fill="#212121" />
-        <rect x="14" y="0" width="1" height="1" fill="#212121" />
-        <rect x="15" y="0" width="1" height="1" fill="#373737" />
-        <rect x="17" y="0" width="1" height="1" fill="#212121" />
-        <rect x="19" y="0" width="1" height="1" fill="#080808" />
-        <rect x="21" y="0" width="1" height="1" fill="#212121" />
-        <rect x="22" y="0" width="1" height="1" fill="#080808" />
-        <rect x="23" y="0" width="1" height="1" fill="#080808" opacity="0.121569" />
-        <rect x="24" y="0" width="1" height="1" fill="#212121" />
-        <rect x="25" y="0" width="1" height="1" fill="#080808" opacity="0.227451" />
-        <rect x="26" y="0" width="1" height="1" fill="#212121" />
-        <rect x="27" y="0" width="1" height="1" fill="#080808" opacity="0.227451" />
-        <rect x="30" y="0" width="1" height="1" fill="#464646" />
-        <rect x="31" y="0" width="1" height="1" fill="#080808" />
-        <rect x="0" y="1" width="1" height="1" fill="#000000" opacity="0.537255" />
-        <rect x="1" y="1" width="1" height="1" fill="#080808" />
-        <rect x="2" y="1" width="1" height="1" fill="#2E2E2E" />
-        <rect x="3" y="1" width="1" height="1" fill="#080808" />
-        <rect x="4" y="1" width="1" height="1" fill="#080808" />
-        <rect x="5" y="1" width="1" height="1" fill="#080808" />
-        <rect x="6" y="1" width="1" height="1" fill="#080808" />
-        <rect x="7" y="1" width="1" height="1" fill="#080808" />
-        <rect x="8" y="1" width="1" height="1" fill="#080808" />
-        <rect x="9" y="1" width="1" height="1" fill="#080808" />
-        <rect x="10" y="1" width="1" height="1" fill="#080808" />
-        <rect x="11" y="1" width="1" height="1" fill="#212121" />
-        <rect x="12" y="1" width="1" height="1" fill="#080808" />
-        <rect x="13" y="1" width="1" height="1" fill="#080808" />
-        <rect x="14" y="1" width="1" height="1" fill="#080808" />
-        <rect x="15" y="1" width="1" height="1" fill="#080808" />
-        <rect x="16" y="1" width="1" height="1" fill="#080808" />
-        <rect x="17" y="1" width="1" height="1" fill="#080808" />
-        <rect x="18" y="1" width="1" height="1" fill="#212121" />
-        <rect x="19" y="1" width="1" height="1" fill="#080808" />
-        <rect x="20" y="1" width="1" height="1" fill="#212121" />
-        <rect x="21" y="1" width="1" height="1" fill="#080808" />
-        <rect x="22" y="1" width="1" height="1" fill="#080808" />
-        <rect x="23" y="1" width="1" height="1" fill="#212121" />
-        <rect x="24" y="1" width="1" height="1" fill="#080808" />
-        <rect x="25" y="1" width="1" height="1" fill="#080808" />
-        <rect x="26" y="1" width="1" height="1" fill="#080808" />
-        <rect x="27" y="1" width="1" height="1" fill="#080808" />
-        <rect x="28" y="1" width="1" height="1" fill="#000000" opacity="0.121569" />
-        <rect x="29" y="1" width="1" height="1" fill="#282828" />
-        <rect x="30" y="1" width="1" height="1" fill="#000000" />
-        <rect x="31" y="1" width="1" height="1" fill="#000000" />
-        <rect x="32" y="1" width="1" height="1" fill="#101010" />
+      <rect x="1" y="0" width="1" height="1" fill="#0E0E0E" />
+      <rect x="2" y="0" width="1" height="1" fill="#080808" opacity="0.541176" />
+      <rect x="3" y="0" width="1" height="1" fill="#131313" />
+      <rect x="5" y="0" width="1" height="1" fill="#131313" />
+      <rect x="7" y="0" width="1" height="1" fill="#0A0A0A" />
+      <rect x="8" y="0" width="1" height="1" fill="#131313" />
+      <rect x="9" y="0" width="1" height="1" fill="#080808" opacity="0.227451" />
+      <rect x="10" y="0" width="1" height="1" fill="#131313" />
+      <rect x="12" y="0" width="1" height="1" fill="#0E0E0E" />
+      <rect x="13" y="0" width="1" height="1" fill="#070707" />
+      <rect x="14" y="0" width="1" height="1" fill="#0E0E0E" />
+      <rect x="15" y="0" width="1" height="1" fill="#131313" />
+      <rect x="17" y="0" width="1" height="1" fill="#131313" />
+      <rect x="19" y="0" width="1" height="1" fill="#131313" />
+      <rect x="21" y="0" width="1" height="1" fill="#1D1D1D" />
+      <rect x="22" y="0" width="1" height="1" fill="#0E0E0E" />
+      <rect x="23" y="0" width="1" height="1" fill="#080808" opacity="0.227451" />
+      <rect x="24" y="0" width="1" height="1" fill="#131313" />
+      <rect x="25" y="0" width="1" height="1" fill="#080808" opacity="0.403922" />
+      <rect x="26" y="0" width="1" height="1" fill="#0E0E0E" />
+      <rect x="27" y="0" width="1" height="1" fill="#080808" opacity="0.403922" />
+      <rect x="30" y="0" width="1" height="1" fill="#151515" />
+      <rect x="31" y="0" width="1" height="1" fill="#080808" />
+      <rect x="0" y="1" width="1" height="1" fill="#000000" opacity="0.976471" />
+      <rect x="1" y="1" width="1" height="1" fill="#060606" />
+      <rect x="2" y="1" width="1" height="1" fill="#060606" />
+      <rect x="3" y="1" width="1" height="1" fill="#060606" />
+      <rect x="4" y="1" width="1" height="1" fill="#060606" />
+      <rect x="5" y="1" width="1" height="1" fill="#060606" />
+      <rect x="6" y="1" width="1" height="1" fill="#060606" />
+      <rect x="7" y="1" width="1" height="1" fill="#060606" />
+      <rect x="8" y="1" width="1" height="1" fill="#060606" />
+      <rect x="9" y="1" width="1" height="1" fill="#060606" />
+      <rect x="10" y="1" width="1" height="1" fill="#060606" />
+      <rect x="11" y="1" width="1" height="1" fill="#060606" />
+      <rect x="12" y="1" width="1" height="1" fill="#060606" />
+      <rect x="13" y="1" width="1" height="1" fill="#060606" />
+      <rect x="14" y="1" width="1" height="1" fill="#060606" />
+      <rect x="15" y="1" width="1" height="1" fill="#060606" />
+      <rect x="16" y="1" width="1" height="1" fill="#060606" />
+      <rect x="17" y="1" width="1" height="1" fill="#060606" />
+      <rect x="18" y="1" width="1" height="1" fill="#060606" />
+      <rect x="19" y="1" width="1" height="1" fill="#060606" />
+      <rect x="20" y="1" width="1" height="1" fill="#060606" />
+      <rect x="21" y="1" width="1" height="1" fill="#060606" />
+      <rect x="22" y="1" width="1" height="1" fill="#050505" />
+      <rect x="23" y="1" width="1" height="1" fill="#060606" />
+      <rect x="24" y="1" width="1" height="1" fill="#060606" />
+      <rect x="25" y="1" width="1" height="1" fill="#060606" />
+      <rect x="26" y="1" width="1" height="1" fill="#060606" />
+      <rect x="27" y="1" width="1" height="1" fill="#060606" />
+      <rect x="28" y="1" width="1" height="1" fill="#000000" opacity="0.227451" />
+      <rect x="29" y="1" width="1" height="1" fill="#101010" />
+      <rect x="30" y="1" width="1" height="1" fill="#000000" />
+      <rect x="31" y="1" width="1" height="1" fill="#000000" />
+      <rect x="32" y="1" width="1" height="1" fill="#030303" /> 
     </svg>
 </template>
 
