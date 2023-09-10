@@ -7,15 +7,10 @@ interface PC {
 defineProps<PC>();
 // присваеваем параметры компоненту
 
-interface Fun {
-    (event: 'click'): void;
-}
-const funEmit = defineEmits<Fun>();
-
 </script>
 
 <template>
-    <svg viewBox="0 0 14 24" class="interact-object pc" v-if="type === 'dark'" version="1.1" width="140" height="240" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" @click="funEmit('click')">
+    <svg viewBox="0 0 14 24" class="interact-object pc" v-if="type === 'dark'" version="1.1" width="140" height="240" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
         <rect x="0" y="0" width="1" height="1" fill="#131123" />
         <rect x="1" y="0" width="1" height="1" fill="#131123" />
         <rect x="2" y="0" width="1" height="1" fill="#131123" />
@@ -354,7 +349,7 @@ const funEmit = defineEmits<Fun>();
         <rect x="13" y="23" width="1" height="1" fill="#131123" />
     </svg>
 
-    <svg viewBox="0 0 14 24" class="interact-object pc" v-if="type === 'light'" version="1.1" width="140" height="240" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" @click="funEmit('click')">
+    <svg viewBox="0 0 14 24" class="interact-object pc" v-if="type === 'light'" version="1.1" width="140" height="240" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
         <rect x="0" y="0" width="1" height="1" fill="#3F3B58" />
         <rect x="1" y="0" width="1" height="1" fill="#28243D" />
         <rect x="2" y="0" width="1" height="1" fill="#201A35" />

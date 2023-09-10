@@ -7,12 +7,13 @@ import { ref } from 'vue'
 
 const counter = ref(0);
 const idMonitor = ref(0);
+const idVerticalMonitor = ref(0);
 const pcType = ref<'dark' | 'light'>('dark');
 const monitorType = ref<'off' | 'ystu'>('off');
 const keyboardMouseType = ref<'dark' | 'light'>('dark');
-const verticalMonitorType = ref<'off' | 'counter'>('off')
+const verticalMonitorType = ref<'off' | 'counter' | 'windows'>('off')
 
-function pcClick() {
+function keyboardClick() {
   counter.value++;
 }
 
@@ -29,18 +30,37 @@ function changeMonitor() {
     keyboardMouseType.value = 'dark'
   }
 }
+
+function changeVerticalMonitor() {
+  idVerticalMonitor.value = (idVerticalMonitor.value + 1) % 3;
+  switch (idVerticalMonitor.value) {
+    case 0: {
+      verticalMonitorType.value = 'off';
+      break;
+    }
+    case 1: {
+      verticalMonitorType.value = 'windows';
+      break;
+    }
+    case 2: {
+      verticalMonitorType.value = 'counter';
+
+      break;
+    }
+  }
+}
 </script>
 
 <template>
   <main>
     <div class ="main">
       <img class="backgraund" src="src\assets\Background.svg" />
-      <PersonalComputer :type="pcType" @click="pcClick" /> 
+      <PersonalComputer :type="pcType" /> 
       <!-- для svg используем компоненты vue -->
       <MonitorState :type="monitorType" @click="changeMonitor"/>
-      <KeyboardMouseState :type="keyboardMouseType" />
-      <VerticalMonitorState :type="verticalMonitorType" />
-      <div class="counter">
+      <KeyboardMouseState :type="keyboardMouseType" @click="keyboardClick" />
+      <VerticalMonitorState :type="verticalMonitorType" @click="changeVerticalMonitor" />
+      <div v-show="verticalMonitorType === 'counter'" class="counter">
         {{ counter }}
       </div>
     </div>
@@ -65,11 +85,12 @@ function changeMonitor() {
   z-index: 1;
   position: absolute;
 }
-
 .counter{
   font-size: 40px;
-  color:aliceblue;
+  color:rgb(13, 35, 54);
   z-index: 1;
   position: absolute;
+  left: 540px;
+  top: 330px;
 }
 </style>

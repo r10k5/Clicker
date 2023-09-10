@@ -5,11 +5,16 @@ interface KeyboardMouse {
 }
 defineProps<KeyboardMouse>();
 
+interface Fun {
+    (event: 'click'): void;
+}
+const funEmit = defineEmits<Fun>();
+
 </script>
 
 <template>
 
-  <svg v-if="type === 'dark'" class="interact-object keyboard-mouse" viewBox="0 0 33 2" version="1.1" width="33" height="2" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <svg v-if="type === 'dark'" class="interact-object keyboard-mouse" viewBox="0 0 33 2" version="1.1" width="33" height="2" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" @click="funEmit('click')">
       <rect x="1" y="0" width="1" height="1" fill="#080808" opacity="0.831373" />
       <rect x="2" y="0" width="1" height="1" fill="#080808" opacity="0.266667" />
       <rect x="3" y="0" width="1" height="1" fill="#080808" opacity="0.831373" />
@@ -68,7 +73,7 @@ defineProps<KeyboardMouse>();
       <rect x="32" y="1" width="1" height="1" fill="#101010" opacity="0.831373" />
   </svg>
 
-  <svg v-if="type === 'light'" class="interact-object keyboard-mouse" viewBox="0 0 33 2" version="1.1" width="33" height="2" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <svg v-if="type === 'light'" class="interact-object keyboard-mouse" viewBox="0 0 33 2" version="1.1" width="33" height="2" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" @click="funEmit('click')">
     <rect x="1" y="0" width="1" height="1" fill="#0E0E0E" />
     <rect x="2" y="0" width="1" height="1" fill="#080808" opacity="0.541176" />
     <rect x="3" y="0" width="1" height="1" fill="#131313" />
