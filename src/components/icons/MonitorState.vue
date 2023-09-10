@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 
 interface Monitors {
@@ -1206,8 +1205,7 @@ const funEmit = defineEmits<Fun>();
     </svg>
 </template>
 
-<style>
-
+<style scoped>
 .interact-object {
   z-index: 1;
   position: absolute;
@@ -1218,5 +1216,4 @@ const funEmit = defineEmits<Fun>();
   top: 340px;
   left: 660px;
 }
-
 </style>

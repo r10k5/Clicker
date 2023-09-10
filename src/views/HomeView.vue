@@ -2,25 +2,19 @@
 import PersonalComputer from '@/components/icons/PersonalComputer.vue';
 import MonitorState from '@/components/icons/MonitorState.vue';
 import KeyboardMouseState from '@/components/icons/KeyboardMouseState.vue';
+import VerticalMonitorState from '@/components/icons/VerticalMonitorState.vue';
 import { ref } from 'vue'
 
 const counter = ref(0);
 const idMonitor = ref(0);
 const pcType = ref<'dark' | 'light'>('dark');
 const monitorType = ref<'off' | 'ystu'>('off');
-const  keyboardMouseType = ref<'dark' | 'light'>('dark');
-// чо?
-const currentMonitor = ref('src\\assets\\Monitor-off.svg');
-
-const monitors = [
-  'src\\assets\\Monitor-off.svg',
-  'src\\assets\\Monitor-ystu.svg'
-];
+const keyboardMouseType = ref<'dark' | 'light'>('dark');
+const verticalMonitorType = ref<'off' | 'counter'>('off')
 
 function pcClick() {
   counter.value++;
 }
-
 
 function changeMonitor() {
   if (idMonitor.value === 0) {
@@ -34,7 +28,6 @@ function changeMonitor() {
     monitorType.value = 'off';
     keyboardMouseType.value = 'dark'
   }
-  currentMonitor.value = monitors[idMonitor.value]
 }
 </script>
 
@@ -46,7 +39,7 @@ function changeMonitor() {
       <!-- для svg используем компоненты vue -->
       <MonitorState :type="monitorType" @click="changeMonitor"/>
       <KeyboardMouseState :type="keyboardMouseType" />
-      <!-- <img class="interact-object keyboard-mouse" src="src\assets\KeyboardMouse.svg"/> -->
+      <VerticalMonitorState :type="verticalMonitorType" />
       <div class="counter">
         {{ counter }}
       </div>
@@ -72,18 +65,7 @@ function changeMonitor() {
   z-index: 1;
   position: absolute;
 }
-.monitor{
-  width: 320px;
-  height: 220px;
-  top: 340px;
-  left: 660px;
-}
-.keyboard-mouse{
-  width: 330px;
-  height: 20px;
-  top: 560px;
-  left: 670px;
-}
+
 .counter{
   font-size: 40px;
   color:aliceblue;
