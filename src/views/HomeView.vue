@@ -16,6 +16,7 @@ const verticalMonitorType = ref<'off' | 'counter' | 'windows'>('off')
 function keyboardClick() {
   if (monitorType.value === 'ystu') {
     counter.value++;
+    
   }
 }
 
@@ -70,6 +71,7 @@ function changeVerticalMonitor() {
       <MonitorState :type="monitorType" @click="changeMonitor"/>
       <KeyboardMouseState :type="keyboardMouseType" @click="keyboardClick" />
       <VerticalMonitorState :type="verticalMonitorType" @click="changeVerticalMonitor" />
+      <img class="testman" src="src\assets\TestMan.gif" />
       <div v-show="verticalMonitorType === 'counter'" class="counter">
         {{ counter }}
       </div>
@@ -78,6 +80,16 @@ function changeVerticalMonitor() {
 </template>
 
 <style scoped>
+.testman{
+  height: 520px;
+  width: 310px;
+  left: 640px;
+  top:350px;
+
+  z-index: 1;
+  position: absolute;
+  opacity: 0.1;
+}
 .main{
   height: 900px;
   width: 1600px;
