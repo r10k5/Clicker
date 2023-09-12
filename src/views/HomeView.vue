@@ -14,7 +14,9 @@ const keyboardMouseType = ref<'dark' | 'light'>('dark');
 const verticalMonitorType = ref<'off' | 'counter' | 'windows'>('off')
 
 function keyboardClick() {
-  counter.value++;
+  if (monitorType.value === 'ystu') {
+    counter.value++;
+  }
 }
 
 function changeMonitor() {
