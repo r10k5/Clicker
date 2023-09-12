@@ -9,7 +9,7 @@ const counter = ref(0);
 const idMonitor = ref(0);
 const idVerticalMonitor = ref(0);
 const pcType = ref<'dark' | 'light'>('dark');
-const monitorType = ref<'off' | 'ystu'>('off');
+const monitorType = ref<'off' | 'ystu' | 'win'>('off');
 const keyboardMouseType = ref<'dark' | 'light'>('dark');
 const verticalMonitorType = ref<'off' | 'counter' | 'windows'>('off')
 
@@ -18,16 +18,24 @@ function keyboardClick() {
 }
 
 function changeMonitor() {
-  if (idMonitor.value === 0) {
-    idMonitor.value = 1;
-    pcType.value = 'light';
-    monitorType.value = 'ystu';
-    keyboardMouseType.value = 'light'
-  } else {
-    idMonitor.value = 0;
-    pcType.value = 'dark';
-    monitorType.value = 'off';
-    keyboardMouseType.value = 'dark'
+  idMonitor.value = (idMonitor.value + 1) % 3;
+  switch (idMonitor.value) {
+    case 0: {
+      monitorType.value = 'ystu';
+      break;
+    }
+    case 1: {
+      pcType.value = 'dark';
+      monitorType.value = 'off';
+      keyboardMouseType.value = 'dark'
+      break;
+    }
+    case 2: {
+      pcType.value = 'light';
+      monitorType.value = 'win';
+      keyboardMouseType.value = 'light';
+      break;
+    }
   }
 }
 
